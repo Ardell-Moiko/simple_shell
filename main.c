@@ -1,5 +1,5 @@
 #include "shell.h"
-
+11;rgb:0000/0000/0000
 /**
  * main - main function
  * @argc: Argument count
@@ -67,7 +67,7 @@ else
 {
 do {
 printf("$ ");
-flush(stdout);
+fflush(stdout);
 
 input = get_input();
 args = parse_input(input);
