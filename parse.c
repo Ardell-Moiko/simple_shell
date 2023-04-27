@@ -46,3 +46,4 @@ char **parse_input(char *input)
 	args[i] = NULL;
 
 	return (args);
+}
