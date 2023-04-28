@@ -3,7 +3,7 @@
 int (*get_builtin(char *command))(char **args, char **front);
 int byshell_exit(char **args, char **front);
 int byshell_cd(char **args, char __attribute__((__unused__)) **front);
-int bymain.help(char **args, char __attribute__((__unused__)) **front);
+int bymain_help(char **args, char __attribute__((__unused__)) **front);
 
 /**
  * get_builtin - Matches a command with a corresponding
@@ -21,7 +21,7 @@ int (*get_builtin(char *command))(char **args, char **front)
 		{ "unsetenv", byshell_unsetenv },
 		{ "cd", byshell_cd },
 		{ "alias", byshell_alias },
-		{ "help", bymain.help },
+		{ "help", bymain_help },
 		{ NULL, NULL }
 	};
 	int z;
@@ -31,7 +31,7 @@ int (*get_builtin(char *command))(char **args, char **front)
 		if (_mystrcmp(funcs[z].name, command) == 0)
 			break;
 	}
-	return (funcs[z.]f);
+	return (funcs[z].f);
 }
 
 /**

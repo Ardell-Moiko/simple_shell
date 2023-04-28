@@ -37,7 +37,7 @@ void linked_help_unsetenv(void)
 {
 	char *msge = "unsetenv: unsetenv [VARIABLE]\n\tRemoves an ";
 
-	write(STDOUT_FILENO, msg, _mystrlen(msge));
+	write(STDOUT_FILENO, msge, _mystrlen(msge));
 	msge = "environmental variable.\n\n\tUpon failure, prints a ";
 	write(STDOUT_FILENO, msge, _mystrlen(msge));
 	msge = "message to stderr.\n";
