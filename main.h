@@ -15,8 +15,8 @@
 #define EXIT -3
 
 extern char **environ;
-extern int hist;
-extern char *name;
+int hist;
+char *name;
 
 /**
  * struct builtin_s - defines builtin commands of shell
